@@ -1,0 +1,353 @@
+/*
+Theme Name: Arda Editorial Journal
+Theme URI: https://ardabasoglu.com/
+Description: Editorial child theme for Arda Basoglu's personal WordPress archive. Built on Twenty Twenty-Five.
+Author: Arda Basoglu / Hermes Agent
+Template: twentytwentyfive
+Version: 0.5.0
+Requires at least: 6.7
+Tested up to: 7.1
+Requires PHP: 7.4
+License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: arda-editorial-journal
+*/
+
+:root {
+  --arda-bg: #f6f1e8;
+  --arda-paper: #fffaf1;
+  --arda-ink: #191714;
+  --arda-muted: #5f5549;
+  --arda-border: #d7ccb8;
+  --arda-accent: #9b4a1f;
+  --arda-focus: #2563eb;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--arda-bg);
+  color: var(--arda-ink);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 0.18em;
+  transition: color 160ms ease, background 160ms ease, transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--arda-focus);
+  outline-offset: 3px;
+}
+
+.wp-site-blocks {
+  max-width: 1120px;
+  margin-inline: auto;
+  padding-inline: 0;
+}
+
+.wp-site-blocks > * {
+  max-width: 1120px !important;
+  margin-inline: auto !important;
+}
+
+/* WordPress adds 50px global padding to <main>. The mockup uses
+   one shared 1120px wrapper with section padding only, so remove it. */
+.wp-site-blocks > main.has-global-padding,
+.wp-site-blocks > main.wp-block-group.has-global-padding {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.wp-site-blocks > main.has-global-padding > .alignwide,
+.wp-site-blocks > main.wp-block-group.has-global-padding > .alignwide {
+  max-width: 1120px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.wp-block-site-title,
+.wp-block-site-title a {
+  font-family: Fraunces, Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  text-decoration: none;
+}
+
+.arda-topbar {
+  border-bottom: 1px solid var(--arda-border);
+  padding-block: 28px;
+  padding-inline: 24px;
+  align-items: center;
+}
+
+.arda-nav {
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.arda-nav p { margin: 0; }
+.arda-nav a { text-decoration: none; }
+.arda-nav a:hover,
+.wp-block-navigation a:hover,
+.wp-block-post-title a:hover { color: var(--arda-accent); }
+
+.arda-hero {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 56px;
+  align-items: center;
+  padding: 72px 24px 58px;
+  border-bottom: 1px solid var(--arda-border);
+}
+
+.arda-hero-text,
+.arda-hero-text.has-global-padding {
+  max-width: none !important;
+  padding-inline: 0 !important;
+}
+
+.arda-hero-text > * {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.arda-hero-figure {
+  margin: 0;
+  border: 1px solid var(--arda-ink);
+  padding: 10px;
+  background: #fff;
+  box-shadow: 14px 14px 0 var(--arda-ink);
+  transform: rotate(1deg);
+}
+
+.arda-hero-figure img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.arda-kicker {
+  color: var(--arda-accent);
+  font-size: 0.82rem;
+  font-weight: 850;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.arda-hero h1,
+.arda-section-title,
+.wp-block-query-title,
+h1.wp-block-post-title,
+h2.wp-block-post-title,
+h1,
+h2 {
+  font-family: Fraunces, Georgia, 'Times New Roman', serif;
+  letter-spacing: -0.055em;
+  text-wrap: balance;
+}
+
+.arda-hero h1 {
+  max-width: none;
+  font-size: clamp(52px, 7vw, 92px);
+  line-height: 0.92;
+  margin: 16px 0 20px;
+}
+
+.arda-hero p {
+  max-width: 58ch;
+  color: var(--arda-muted);
+  font-size: 20px;
+}
+
+.arda-button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.wp-block-button__link,
+.arda-pill {
+  border-radius: 0;
+  border: 1px solid var(--arda-ink);
+  box-shadow: none;
+  font-weight: 850;
+}
+
+.wp-block-button__link:hover {
+  transform: translateY(-2px);
+  box-shadow: 7px 7px 0 var(--arda-ink);
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+  background: transparent;
+  color: var(--arda-ink);
+}
+
+.arda-section {
+  padding: 54px 24px;
+  border-bottom: 1px solid var(--arda-border);
+}
+
+.arda-section-title {
+  font-size: clamp(2.1rem, 5vw, 3.4rem);
+  line-height: 1;
+  margin: 0 0 24px;
+}
+
+.arda-card,
+.wp-block-post-template > li {
+  background: var(--arda-paper);
+  border: 1px solid var(--arda-border);
+  padding: clamp(20px, 3vw, 30px);
+}
+
+.wp-block-post-template > li {
+  min-height: 240px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.wp-block-post-template > li:hover {
+  border-color: var(--arda-ink);
+  box-shadow: 8px 8px 0 var(--arda-ink);
+  transform: translateY(-4px);
+}
+
+.wp-block-post-date,
+.wp-block-post-terms,
+.arda-meta {
+  color: var(--arda-accent);
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.wp-block-post-template .wp-block-post-title {
+  margin: 0;
+  font-size: clamp(1.45rem, 2.1vw, 1.85rem) !important;
+  line-height: 1.08;
+}
+
+.wp-block-post-template .wp-block-post-title a {
+  display: block;
+}
+
+.wp-block-post-template .wp-block-post-excerpt {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.48;
+}
+
+.wp-block-post-template .wp-block-post-excerpt__excerpt {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 0;
+}
+
+.wp-block-post-template .wp-block-post-excerpt__more-text {
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.wp-block-post-template .wp-block-post-excerpt__more-link {
+  display: inline-block;
+  color: var(--arda-ink);
+  font-size: 0.82rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.wp-block-post-template .wp-block-post-excerpt__more-link:hover {
+  color: var(--arda-accent);
+}
+
+.wp-block-post-excerpt,
+.arda-card p,
+.entry-content p { color: var(--arda-muted); }
+
+.wp-block-post-title a { text-decoration: none; }
+
+.wp-block-post-featured-image img,
+.arda-photo-frame img {
+  border: 1px solid var(--arda-ink);
+  background: #fff;
+  padding: 10px;
+  box-shadow: 12px 12px 0 var(--arda-ink);
+}
+
+.entry-content,
+.wp-block-post-content {
+  font-size: clamp(1.08rem, 1.4vw, 1.18rem);
+  line-height: 1.78;
+}
+
+.wp-block-post-content > * + * {
+  margin-block-start: 1.25em;
+}
+
+.wp-block-post-content h2,
+.wp-block-post-content h3 {
+  margin-block-start: 1.8em;
+  margin-block-end: 0.55em;
+}
+
+.wp-block-post-content pre,
+.wp-block-post-content code {
+  font-family: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.wp-block-post-content pre {
+  background: #191714;
+  color: #fffaf1;
+  border: 1px solid var(--arda-ink);
+  padding: 18px;
+  overflow-x: auto;
+}
+
+.entry-content img,
+.wp-block-post-content img {
+  border: 1px solid var(--arda-border);
+  background: #fff;
+  padding: 8px;
+}
+
+footer.wp-block-template-part,
+.arda-footer {
+  color: #756b60;
+  padding-block: 34px;
+}
+
+@media (max-width: 782px) {
+  .wp-site-blocks { padding-inline: 0; }
+  .arda-topbar { padding-block: 20px; }
+  .arda-nav { display: none; }
+  .arda-hero { grid-template-columns: 1fr; padding-block: 38px; gap: 32px; }
+  .arda-hero-figure { box-shadow: 7px 7px 0 var(--arda-ink); transform: none; }
+  .wp-block-post-featured-image img,
+  .arda-photo-frame img { box-shadow: 7px 7px 0 var(--arda-ink); }
+  .wp-block-post-template > li:hover { transform: none; box-shadow: none; }
+}
