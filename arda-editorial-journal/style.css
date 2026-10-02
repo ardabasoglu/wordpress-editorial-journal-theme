@@ -4,7 +4,7 @@ Theme URI: https://ardabasoglu.com/
 Description: Editorial child theme for Arda Basoglu's personal WordPress archive. Built on Twenty Twenty-Five.
 Author: Arda Basoglu / Hermes Agent
 Template: twentytwentyfive
-Version: 0.5.0
+Version: 0.6.0
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
@@ -209,6 +209,120 @@ h2 {
   margin: 0 0 24px;
 }
 
+.arda-section-head {
+  align-items: end;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.arda-all-posts-link {
+  margin: 0;
+}
+
+.arda-all-posts-link a,
+.arda-blog-pagination a,
+.arda-blog-pagination span {
+  display: inline-block;
+  border: 1px solid var(--arda-ink);
+  background: transparent;
+  color: var(--arda-ink);
+  padding: 10px 14px;
+  font-size: 0.82rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.arda-all-posts-link a:hover,
+.arda-blog-pagination a:hover {
+  background: var(--arda-ink);
+  color: #fff;
+}
+
+.arda-blog-archive {
+  padding: 72px 24px 64px;
+  border-bottom: 1px solid var(--arda-border);
+}
+
+.arda-blog-intro {
+  max-width: 760px;
+  margin-bottom: 44px;
+}
+
+.arda-blog-intro h1 {
+  font-size: clamp(3.2rem, 7vw, 5.75rem);
+  line-height: 0.92;
+  margin: 0 0 18px;
+}
+
+.arda-blog-intro p {
+  color: var(--arda-muted);
+  font-size: 20px;
+  line-height: 1.55;
+}
+
+.arda-blog-list {
+  border-top: 1px solid var(--arda-border);
+}
+
+.arda-blog-entry {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: clamp(24px, 5vw, 64px);
+  padding: 34px 0;
+  border-bottom: 1px solid var(--arda-border);
+}
+
+.arda-blog-entry time {
+  color: var(--arda-accent);
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.arda-blog-entry h2 {
+  font-size: clamp(1.9rem, 4vw, 3.25rem);
+  line-height: 1.02;
+  margin: 0 0 12px;
+}
+
+.arda-blog-entry h2 a {
+  text-decoration: none;
+}
+
+.arda-blog-entry .excerpt {
+  max-width: 760px;
+  color: var(--arda-muted);
+  font-size: 1.06rem;
+  line-height: 1.6;
+}
+
+.arda-blog-entry .read-more {
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--arda-ink);
+  font-size: 0.82rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.arda-blog-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 34px;
+}
+
+.arda-blog-pagination .current {
+  background: var(--arda-ink);
+  color: #fff;
+}
+
 .arda-card,
 .wp-block-post-template > li {
   background: var(--arda-paper);
@@ -350,4 +464,8 @@ footer.wp-block-template-part,
   .wp-block-post-featured-image img,
   .arda-photo-frame img { box-shadow: 7px 7px 0 var(--arda-ink); }
   .wp-block-post-template > li:hover { transform: none; box-shadow: none; }
+  .arda-section-head { display: block; }
+  .arda-all-posts-link { margin-top: 16px; }
+  .arda-blog-entry { grid-template-columns: 1fr; gap: 10px; }
+  .arda-blog-archive { padding-block: 46px; }
 }

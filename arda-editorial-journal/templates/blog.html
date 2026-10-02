@@ -1,0 +1,32 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"arda-blog-archive","layout":{"type":"constrained"}} -->
+<main class="wp-block-group arda-blog-archive" id="wp--skip-link--target">
+	<!-- wp:group {"className":"arda-blog-intro","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group arda-blog-intro"><!-- wp:paragraph {"className":"arda-kicker"} -->
+	<p class="arda-kicker">All writing</p>
+	<!-- /wp:paragraph -->
+	<!-- wp:heading {"level":1} -->
+	<h1 class="wp-block-heading">Blog archive</h1>
+	<!-- /wp:heading -->
+	<!-- wp:paragraph -->
+	<p>Browse the full archive of personal stories, technical notes, music memories, old photographs, and Turkish/English writing.</p>
+	<!-- /wp:paragraph --></div>
+	<!-- /wp:group -->
+
+	<!-- wp:query {"queryId":60,"query":{"perPage":12,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[1],"sticky":"exclude","inherit":false},"className":"arda-blog-query"} -->
+	<div class="wp-block-query arda-blog-query"><!-- wp:post-template {"className":"arda-blog-list"} -->
+	<!-- wp:post-date /-->
+	<!-- wp:post-title {"isLink":true} /-->
+	<!-- wp:post-excerpt {"moreText":"Read more","excerptLength":28} /-->
+	<!-- /wp:post-template -->
+	<!-- wp:query-pagination {"className":"arda-blog-pagination","layout":{"type":"flex","justifyContent":"left"}} -->
+	<!-- wp:query-pagination-previous {"label":"Newer posts"} /-->
+	<!-- wp:query-pagination-numbers /-->
+	<!-- wp:query-pagination-next {"label":"Older posts"} /-->
+	<!-- /wp:query-pagination --></div>
+	<!-- /wp:query -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

@@ -20,7 +20,7 @@
 
 			<!-- wp:buttons {"className":"arda-button-row"} -->
 			<div class="wp-block-buttons arda-button-row"><!-- wp:button -->
-			<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#recent-writing">Read the blog</a></div>
+			<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/blog/">Read the blog</a></div>
 			<!-- /wp:button -->
 
 			<!-- wp:button {"className":"is-style-outline"} -->
@@ -38,9 +38,14 @@
 
 	<!-- wp:group {"align":"wide","className":"arda-section","layout":{"type":"constrained"}} -->
 	<div id="recent-writing" class="wp-block-group alignwide arda-section">
-		<!-- wp:heading {"className":"arda-section-title"} -->
+		<!-- wp:group {"className":"arda-section-head","layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap"}} -->
+		<div class="wp-block-group arda-section-head"><!-- wp:heading {"className":"arda-section-title"} -->
 		<h2 class="wp-block-heading arda-section-title">Recent writing</h2>
 		<!-- /wp:heading -->
+		<!-- wp:paragraph {"className":"arda-all-posts-link"} -->
+		<p class="arda-all-posts-link"><a href="/blog/">View all posts</a></p>
+		<!-- /wp:paragraph --></div>
+		<!-- /wp:group -->
 
 		<!-- wp:query {"queryId":1,"query":{"perPage":6,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[1],"sticky":"exclude","inherit":false},"align":"wide"} -->
 		<div class="wp-block-query alignwide"><!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
