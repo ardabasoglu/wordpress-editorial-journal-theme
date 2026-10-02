@@ -4,7 +4,7 @@ A WordPress child theme for `ardabasoglu.com`, based on Twenty Twenty-Five.
 
 ## What it changes
 
-- Warm editorial paper-like background
+- Ink & Aegean Blue editorial palette
 - Fraunces/Inter typography pairing
 - Homepage hero with two-column editorial layout
 - Framed hero image
@@ -13,6 +13,7 @@ A WordPress child theme for `ardabasoglu.com`, based on Twenty Twenty-Five.
 - Improved single post/page readability
 - Styled code blocks for technical posts
 - Simple header/footer template parts
+- Full `/blog/` archive with search, topic shortcuts, year filters, and pagination
 
 ## Parent theme
 

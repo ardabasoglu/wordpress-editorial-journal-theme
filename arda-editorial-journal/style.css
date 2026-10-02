@@ -4,7 +4,7 @@ Theme URI: https://ardabasoglu.com/
 Description: Editorial child theme for Arda Basoglu's personal WordPress archive. Built on Twenty Twenty-Five.
 Author: Arda Basoglu / Hermes Agent
 Template: twentytwentyfive
-Version: 0.7.0
+Version: 0.8.0
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
@@ -14,13 +14,13 @@ Text Domain: arda-editorial-journal
 */
 
 :root {
-  --arda-bg: #f6f1e8;
-  --arda-paper: #fffaf1;
-  --arda-ink: #191714;
-  --arda-muted: #5f5549;
-  --arda-border: #d7ccb8;
-  --arda-accent: #9b4a1f;
-  --arda-focus: #2563eb;
+  --arda-bg: #F6F8FB;
+  --arda-paper: #FFFFFF;
+  --arda-ink: #111827;
+  --arda-muted: #42526B;
+  --arda-border: #D8E2F0;
+  --arda-accent: #2563EB;
+  --arda-focus: #2563EB;
 }
 
 html { scroll-behavior: smooth; }
@@ -510,8 +510,8 @@ h2 {
 }
 
 .wp-block-post-content pre {
-  background: #191714;
-  color: #fffaf1;
+  background: #111827;
+  color: #F6F8FB;
   border: 1px solid var(--arda-ink);
   padding: 18px;
   overflow-x: auto;
@@ -526,7 +526,7 @@ h2 {
 
 footer.wp-block-template-part,
 .arda-footer {
-  color: #756b60;
+  color: #42526B;
   padding-block: 34px;
 }
 

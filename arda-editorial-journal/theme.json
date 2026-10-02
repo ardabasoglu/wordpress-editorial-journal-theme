@@ -9,12 +9,12 @@
     },
     "color": {
       "palette": [
-        { "slug": "arda-bg", "name": "Arda Background", "color": "#f6f1e8" },
-        { "slug": "arda-paper", "name": "Arda Paper", "color": "#fffaf1" },
-        { "slug": "arda-ink", "name": "Arda Ink", "color": "#191714" },
-        { "slug": "arda-muted", "name": "Arda Muted", "color": "#5f5549" },
-        { "slug": "arda-accent", "name": "Arda Accent", "color": "#9b4a1f" },
-        { "slug": "arda-border", "name": "Arda Border", "color": "#d7ccb8" }
+        { "slug": "arda-bg", "name": "Arda Background", "color": "#F6F8FB" },
+        { "slug": "arda-paper", "name": "Arda Paper", "color": "#FFFFFF" },
+        { "slug": "arda-ink", "name": "Arda Ink", "color": "#111827" },
+        { "slug": "arda-muted", "name": "Arda Muted", "color": "#42526B" },
+        { "slug": "arda-accent", "name": "Arda Accent", "color": "#2563EB" },
+        { "slug": "arda-border", "name": "Arda Border", "color": "#D8E2F0" }
       ]
     },
     "typography": {
@@ -34,8 +34,8 @@
   },
   "styles": {
     "color": {
-      "background": "#f6f1e8",
-      "text": "#191714"
+      "background": "#F6F8FB",
+      "text": "#111827"
     },
     "typography": {
       "fontFamily": "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
@@ -43,7 +43,7 @@
       "lineHeight": "1.55"
     },
     "elements": {
-      "link": { "color": { "text": "#191714" } },
+      "link": { "color": { "text": "#111827" } },
       "heading": {
         "typography": {
           "fontFamily": "Fraunces, Georgia, 'Times New Roman', serif",
