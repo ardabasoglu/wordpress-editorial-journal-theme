@@ -4,7 +4,7 @@ Theme URI: https://ardabasoglu.com/
 Description: Editorial child theme for Arda Basoglu's personal WordPress archive. Built on Twenty Twenty-Five.
 Author: Arda Basoglu / Hermes Agent
 Template: twentytwentyfive
-Version: 0.6.0
+Version: 0.7.0
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
@@ -262,6 +262,81 @@ h2 {
   line-height: 1.55;
 }
 
+
+.arda-blog-tools {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+  gap: 24px;
+  align-items: start;
+  margin: 34px 0 46px;
+}
+
+.arda-blog-search {
+  display: flex;
+  gap: 10px;
+  background: var(--arda-paper);
+  border: 1px solid var(--arda-border);
+  padding: 12px;
+}
+
+.arda-blog-search input[type="search"] {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid var(--arda-border);
+  background: #fff;
+  color: var(--arda-ink);
+  font: inherit;
+  padding: 12px 14px;
+}
+
+.arda-blog-search button,
+.arda-filter-chip {
+  border: 1px solid var(--arda-ink);
+  background: transparent;
+  color: var(--arda-ink);
+  padding: 11px 14px;
+  font-size: 0.82rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.arda-blog-search button:hover,
+.arda-filter-chip:hover,
+.arda-filter-chip.is-active {
+  background: var(--arda-ink);
+  color: #fff;
+}
+
+.arda-blog-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.arda-filter-heading {
+  flex-basis: 100%;
+  margin: 0 0 2px;
+  color: var(--arda-muted);
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.arda-blog-active-filter {
+  margin-bottom: 24px;
+  color: var(--arda-muted);
+  font-size: 0.95rem;
+}
+
+.arda-blog-active-filter a {
+  color: var(--arda-ink);
+  font-weight: 800;
+}
+
 .arda-blog-list {
   border-top: 1px solid var(--arda-border);
 }
@@ -468,4 +543,6 @@ footer.wp-block-template-part,
   .arda-all-posts-link { margin-top: 16px; }
   .arda-blog-entry { grid-template-columns: 1fr; gap: 10px; }
   .arda-blog-archive { padding-block: 46px; }
+  .arda-blog-tools { grid-template-columns: 1fr; }
+  .arda-blog-search { flex-direction: column; }
 }
